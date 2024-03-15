@@ -7,7 +7,7 @@ def remove_label_convert_int(value):
     return int(value.split(': ')[1])
 
 # Ścieżka do pliku CSV z danymi
-file_path = "2024_03_11.csv"
+file_path = "2024_03_15.csv"
 
 # Wczytanie danych, stosując funkcję konwersji do odpowiednich kolumn
 data = pd.read_csv(
@@ -37,7 +37,7 @@ plt.gca().xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
 
 # Dodanie legendy, tytułu i etykiet osi
 plt.legend()
-plt.title('Zmiany wartości RGB w czasie')
+plt.title('Zmiany wartości RGB w czasie' + file_path)
 plt.xlabel('Czas')
 plt.ylabel('Wartość składowych RGB')
 
